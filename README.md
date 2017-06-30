@@ -24,7 +24,7 @@ Pipelinex provides two macros to build pipelines, `task` and `pipeline`.
 
 Build simple pipelines using the `task` macro:
 
-```
+```elixir
 defmodule MyPipeline do
   use Pipelinex
 
@@ -40,7 +40,7 @@ end
 
 Execute the pipeline via it's injected `run/1` function:
 
-```
+```elixir
 result = MyPipeline.run(5)
 result == 20
 ```
@@ -49,7 +49,7 @@ result == 20
 
 Pipelines can execute other pipelines using the `pipeline` macro:
 
-```
+```elixir
 defmodule MyOtherPipeline do
   use Pipelinex
 
@@ -68,7 +68,7 @@ result == 40
 
 The `task` macro supports pattern matching for its data argument.
 
-```
+```elixir
 defmodule MyPipeline do
   use Pipelinex
 
@@ -85,7 +85,7 @@ end
 If two or more tasks with the same name are defined one after another,
 the task will be called once and normal pattern matching behaviour will be applied.
 
-```
+```elixir
 defmodule MyPipeline do
   use Pipelinex
 
@@ -109,7 +109,7 @@ value == 10
 
 Pipelinex logs when a task starts and ends using `Logger.info`
 
-```
+```elixir
 defmodule MyPipeline do
   use Pipelinex
 
