@@ -17,7 +17,7 @@ defmodule Pipelinex.Mixfile do
   end
 
   defp deps do
-    []
+    [{:ex_doc, ">= 0.0.0", only: :dev}]
   end
 
   defp description do
